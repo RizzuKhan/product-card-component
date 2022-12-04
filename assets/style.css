@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Fraunces", serif;
+  font-size: 14px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%);
+}
+.image-container {
+  width: 50%;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.card {
+  display: flex;
+  max-width: 550px;
+  background-color: white;
+  border-radius: 10px;
+  /* margin: 0 1rem; */
+}
+.content-container {
+  width: 50%;
+  padding: 2rem;
+}
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: hsl(228, 12%, 48%);
+  letter-spacing: 3px;
+  margin-bottom: 1.75rem;
+  text-transform: uppercase;
+}
+.title {
+  line-height: 28px;
+  padding-right: 1rem;
+  margin-bottom: 1.75rem;
+}
+.desc {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  color: hsl(228, 12%, 48%);
+  line-height: 22px;
+  margin-bottom: 1.75rem;
+}
+.price {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.75rem;
+}
+.current-price {
+  color: hsl(158, 36%, 37%);
+}
+.old-price {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(228, 12%, 48%);
+  text-decoration: line-through;
+}
+button.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 10px;
+  gap: 16px;
+  font-family: "Montserrat";
+  cursor: pointer;
+}
+button.cta:hover {
+  background-color: hsl(212, 21%, 14%);
+}
+
+@media only screen and (max-width: 550px) {
+  .card {
+    flex-direction: column;
+    margin: 16px;
+  }
+  .image-container {
+    width: 100%;
+    height: 40%;
+  }
+  .image-container img {
+    content: url("../images/image-product-mobile.jpg");
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  .content-container {
+    width: 100%;
+  }
+  .title {
+    padding-right: 0px;
+  }
+}
